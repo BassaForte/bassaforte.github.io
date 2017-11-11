@@ -1,0 +1,55 @@
+<html>
+
+<script>
+    window.onload = onLoad;
+
+    function onLoad() {
+        document.getElementById('hidden-form').submit();
+    }
+
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+    function responsiveNav() {
+        var x = document.getElementById("nav");
+        if (x.className === "navbar") {
+            x.className += " responsive";
+        } else {
+            x.className = "navbar";
+        }
+    }
+</script>
+
+<iframe width="0" height="0" style="display: none" name="dummyframe" id="dummyframe"></iframe>
+
+<form id="hidden-form" method="post" action="{{ site.download-site }}" target="dummyframe">
+    <input type="hidden" name="hello" value="world" />
+</form>
+
+<div class="header">
+    <div class="navbar-shadow"></div>
+    <div class="navbar" id="nav">
+        <ul class="links">
+            <li><a href="/" class="{%if page.url == '/'%}active{%endif%}">HOME</a></li>
+            <li><a href="/music" class="{%if page.url contains '/music/'%}active{%endif%}">MUSIC</a></li>
+            <li><a href="/merch" class="{%if page.url == '/merch/'%}active{%endif%}">MERCH</a></li>
+            <li><a href="/contact" class="{%if page.url == '/contact/'%}active{%endif%}">CONTACT</a></li>
+            <li class="br"></li>
+            <li class="sm"><a href="http://soundcloud.com/kraedt" title="Soundcloud" target="_blank"><img
+                    src="/assets/images/soundcloud_icon.png"></a></li>
+            <li class="sm"><a href="http://youtube.com/kraedt" title="YouTube" target="_blank"><img
+                    src="/assets/images/youtube_icon.png"></a></li>
+            <li class="sm"><a href="https://open.spotify.com/artist/0YbhxZi9PSVTmB4UMkM5Jw" title="Spotify"
+                              target="_blank"><img src="/assets/images/spotify_icon.png"></a></li>
+            <li class="sm"><a href="https://pro.beatport.com/artist/kraedt/429462" title="Beatport" target="_blank"><img
+                    src="/assets/images/beatport_icon.png"></a></li>
+            <li class="sm"><a href="http://facebook.com/kraedt" title="Facebook" target="_blank"><img
+                    src="/assets/images/facebook_icon.png"></a></li>
+            <li class="sm"><a href="http://twitter.com/kraedt" title="Twitter" target="_blank"><img
+                    src="/assets/images/twitter_icon.png"></a></li>
+            <li class="sm"><a href="http://instagram.com/kraedt" title="Instagram" target="_blank"><img
+                    src="/assets/images/instagram_icon.png"></a></li>
+            <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">&#9776;</a>
+        </ul>
+    </div>
+    <div class="logo"><img src="/assets/images/logo.png"/></div>
+</div>
+</html>

@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+<h2><a href="/music">See More Music</a></h2>
+<table class="song-page">
+    <tr>
+        {% assign image-url = page.image %}
+        {% if page.image == nil %}
+        {% assign image-url = 'no-image.jpg' %}
+        {% endif %}
+        <td><img src="/assets/images/songs/{{ image-url }}"/></td>
+    </tr>
+    <tr>
+        <td>
+            <h2>{{page.title}}</h2>
+            <h3>{{page.artist}}</h3>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {% if page.yt-id != nil %}
+            {% include song-embed.html yt-id=page.yt-id %}
+            {% endif %}
+        </td>
+    </tr>
+    <tr><td><br/></td></tr>
+    {% if page.downloadable %}
+    <tr>
+        <td>
+            <button class="btn-download" type="button"
+                    onClick="javascript:location.href = '{{ site.download-site-dl }}{{ page.id }}';"/>
+            DOWNLOAD</button></td>
+    </tr>
+    {% endif %}
+    <tr>
+        <td>
+            {% if page.buy-able %}
+            <p>Buy the song:</p>
+            {% include ext-link.html url=page.itunes title='iTunes' img='itunes' %}
+            {% include ext-link.html url=page.beatport title='Beatport' img='beatport' %}
+            {% include ext-link.html url=page.gplay title='Google Play' img='google' %}
+            {% include ext-link.html url=page.amazon title='iTunes' img='amazon' %}
+            {% endif %}
+            {% if page.spotify != nil %}
+            <p>Stream:</p>
+            {% include ext-link.html url=page.spotify title='Spotify' img='spotify' %}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3>License Information:</h3>
+            {% assign license-info = site.data.license | where:'id',page.license %}
+            <p>{{ license-info[0].desc }}</p>
+            {% if license-info[0].info-url != nil %}
+            <a href="{{ license-info[0].info-url }}" target="_blank">More Info</a>
+            {% endif %}
+        </td>
+    </tr>
+</table>

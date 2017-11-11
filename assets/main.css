@@ -16,11 +16,10 @@ body {
 .content-window {
     padding: 0 15px 15px 15px;
     background: rgba(0, 0, 0, 0.8);
-    border: solid #FF9A01;
-    border-radius: 10px;
+    border: solid #a103ff;
+    border-radius: 0;
     box-shadow: 14px 14px 28px rgba(0, 0, 0, 0.8);
 }
-
 
 .body-content {
     min-height: calc(100vh - 340px);
@@ -100,6 +99,7 @@ ul {
 
 h1 {
     font-size: 2em;
+    text-align: center;
 }
 
 h2 {
@@ -111,18 +111,18 @@ h3 {
 }
 
 a {
-    color: #FF9A03;
+    color: #a103ff;
     text-decoration: none;
 }
 
 a:hover,
 a:focus {
-    color: #FFD603;
+    color: #a305ff;
     text-decoration: none;
 }
 
 p {
-    font-size: 1em;
+    font-size: 16px;
 }
 
 .image-prop {
@@ -148,9 +148,10 @@ p {
 .navbar-shadow {
     position: absolute;
     margin-top: -8px;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    margin-left: -2em;
+    background: #222;
     width: 150%;
-    height: 95px;
+    height: 70px;
     border: none;
     z-index: -1;
 }
@@ -245,6 +246,7 @@ p {
     font-size: 1.4em;
     font-family: Leon, serif;
     color: #ffffff;
+    padding-bottom: 3em;
 }
 
 .header a {
@@ -257,7 +259,7 @@ p {
 .header a:active,
 .header a:hover,
 .header a.focus {
-    color: #FF9A03;
+    color: #a103ff;
     background-color: transparent;
 }
 
@@ -279,7 +281,7 @@ footer {
     height: 20px;
     text-align: center;
     color: black;
-    font-size: 1.2em;
+    font-size: 16px;
     font-family: Montserrat, sans-serif;
     font-style: italic;
     font-weight: bold;
@@ -293,68 +295,8 @@ footer a:visited {
 
 footer a:hover,
 footer a:focus {
-    color: #FF9A03;
+    color: #a103ff;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-}
-
-/*</editor-fold>*/
-
-/*<editor-fold desc="Music">*/
-
-.music-page {
-    width: 100%;
-}
-
-.music-page td {
-    border-top: 1px inset white;
-    text-align: center;
-}
-
-.song-page, .song-page td {
-    width: 100%;
-    text-align: center;
-}
-
-.audio-links {
-    display: inline-block;
-    width: 280px;
-}
-
-/*</editor-fold>*/
-
-/*<editor-fold desc="Song Page">*/
-
-.btn-download {
-    background: #ff9a01;
-    color: white;
-    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-    width: 150px;
-    height: 40px;
-    border: 2px;
-    border-color: black;
-    border-radius: 8px;
-    border-style: solid;
-    font-family: Leon, sans-serif;
-    font-variant: all-small-caps;
-    font-weight: bold;
-    font-size: 32px;
-}
-
-.btn a {
-    vertical-align: middle;
-}
-
-.btn-download:hover {
-    background: #333;
-    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
-    border-color: #ff9a01;
-}
-
-.btn-download h1 {
-
-    margin-top: -4px;
-
-    vertical-align: middle;
 }
 
 /*</editor-fold>*/

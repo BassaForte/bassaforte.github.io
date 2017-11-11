@@ -1,7 +1,15 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
-title: Kraedt - Home
+title: Chris Schwartz - Home
 ---
+# Welcome to my portfolio website!
+## What do I do?
+---
+### Game Development
+Text
+
+### Software / Web Development
+Text
+
+### Music Production
+Text

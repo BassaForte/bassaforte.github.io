@@ -13,19 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Kraedt
-email: kraedt@gmail.com
+title: Chris Schwartz
+email: cschwartz110@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
 
-# My shit
-latest-spotify: "https://open.spotify.com/embed?uri=spotify:track:1moIdPttdxgeQpdIyJ2cvH"
-download-site: "http://download.kraedt.com/"
-download-site-dl: "http://download.kraedt.com/download?songid="
-
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://kraedt.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://bassaforte.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: kraedt
-github_username:  kraedt
+github_username:  bassaforte
 
 # Build settings
 markdown: kramdown
